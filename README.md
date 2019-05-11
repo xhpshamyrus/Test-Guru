@@ -1,6 +1,6 @@
 # Test-Guru objects
-	*User
 	*Admin
+	*User
 	*Test
 	*Question
 	*Answer
