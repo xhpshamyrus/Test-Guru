@@ -1,4 +1,4 @@
-# Test-Guru objects
+# Test-Guru object
 	*Admin
 	*User
 	*Test
