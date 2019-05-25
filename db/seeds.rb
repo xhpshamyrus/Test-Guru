@@ -6,40 +6,42 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create(login: 'Alex')
+User.create(login: 'Ivan')
+User.create(login: 'Ben')
 
-categories = Category.create([{ title: 'Математика' },
-                              { title: 'Русский язык' },
-                              { title: 'Геоеграфия' }])
+Category.create(title: 'Математика')
+Category.create(title: 'Русский язык')
+Category.create(title: 'Геоеграфия')
 
-tests = Test.create([
-                      { title: 'Целые числа', level: 1, category_id: categories[0].id },
-                      { title: 'Значения выражений', level: 2, category_id: categories[0].id },
-                      { title: 'Правописание', level: 1, category_id: categories[1].id },
-                      { title: 'Орфография ', level: 2, category_id: categories[1].id },
-                      { title: 'Картография', level: 1, category_id: categories[2].id },
-                      { title: 'Карта мира', level: 2, category_id: categories[2].id }
-                    ])
+Test.create(title: 'Целые числа', category_id: 1, level: 1)
+Test.create(title: 'Значения выражений', category_id: 1, level: 2)
+Test.create(title: 'Правописание', category_id: 2, level: 1)
+Test.create(title: 'Орфография ',  category_id: 2, level: 2)
+Test.create(title: 'Картография', category_id: 3, level: 1)
+Test.create(title: 'Карта мира', category_id: 3, level: 2)
 
 
-questions = Question.create ([
-                      { body: 'Сумма чисел 35 и 47 равна ли 82? ', test_id: tests[0].id },
-                      { body: 'При х = 12 значение выражения (80 - x) равно 68?', test_id: tests[1].id },
-                      { body: 'Слово "неизмен.ый" пишется с двумя "н"?', test_id: tests[2].id },
-                      { body: 'Необходим ли мягкий знак в слове "пер.я"?', test_id: tests[3].id },
-                      { body: 'Является ли глобус моделью земли?', test_id: tests[4].id },
-                      { body: 'Сидней, это столица Австралии?', test_id: tests[5].id }
-                    ])
-answers = Answer.create ([
-                      { body: 'Да', questions_id: questions[0].id, correct: true},
-                      { body: 'Нет', questions_id: questions[0].id },
-                      { body: 'Да', questions_id: questions[1].id, correct: true},
-                      { body: 'Нет', questions_id: questions[1].id },
-                      { body: 'Да', questions_id: questions[2].id, correct: true},
-                      { body: 'Нет', questions_id: questions[2].id },
-                      { body: 'Да', questions_id: questions[3].id, correct: true},
-                      { body: 'Нет', questions_id: questions[3].id },
-                      { body: 'Да', questions_id: questions[4].id, correct: true},
-                      { body: 'Нет', questions_id: questions[4].id },
-                      { body: 'Нет', questions_id: questions[5].id, correct: true},
-                      { body: 'Да', questions_id: questions[5].id }
-                    ])
+Question.create(body: 'Сумма чисел 35 и 47 равна ли 82? ', test_id: 1)
+Question.create(body: 'При х = 12 значение выражения (80 - x) равно 68?',test_id: 2)
+Question.create(body: 'Слово "неизмен.ый" пишется с двумя "н"?', test_id: 3)
+Question.create(body: 'Необходим ли мягкий знак в слове "пер.я"?', test_id: 4)
+Question.create(body: 'Является ли глобус моделью земли?', test_id: 5)
+Question.create(body: 'Сидней, это столица Австралии?', test_id: 6)
+
+Answer.create(body: 'Да', questions_id: 1, correct: true)
+Answer.create(body: 'Нет', questions_id: 1)
+Answer.create(body: 'Да', questions_id: 2, correct: true)
+Answer.create(body: 'Нет', questions_id: 2)
+Answer.create(body: 'Да', questions_id: 3, correct: true)
+Answer.create(body: 'Нет', questions_id: 3)
+Answer.create(body: 'Да', questions_id: 4, correct: true)
+Answer.create(body: 'Нет', questions_id: 4)
+Answer.create(body: 'Да', questions_id: 5, correct: true)
+Answer.create(body: 'Нет', questions_id: 5)
+Answer.create(body: 'Нет', questions_id: 6, correct: true)
+Answer.create(body: 'Да', questions_id: 6 )
+
+TestsUser.create(user_id: 1, test_id: 1)
+TestsUser.create(user_id: 1, test_id: 2)
+TestsUser.create(user_id: 1, test_id: 3)
