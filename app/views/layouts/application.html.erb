@@ -11,22 +11,18 @@
 
   <body>
     <h2><%= link_to 'TestGuru', root_path %></h2>
+    <%= render 'shared/flash' %>
 
-    <%= flash_message(:alert) %>
-    <%= flash_message(:notice) %>
-
-    <% if logged_in? %>
-      <p class="nav user">
-      Welcome, <%= current_user.login %> Guru! |
-      <%= link_to 'Logout', logout_path, data: { method: :delete } %>
+    <p class="nav user">
+    <% if user_signed_in? %>
+      Welcome, <%= current_user.first_name %> Guru! |
+      <%= link_to 'Logout', destroy_user_session_path, data: { method: :delete } %>
     <% else %>
-      <p class="nav user">
-      <%= link_to 'Registration', signup_path %> |
-      <%= link_to 'Login', login_path %>
+      <%= link_to 'Registration', new_user_registration_path %> |
+      <%= link_to 'LogIn', new_user_session_path %>
     <% end %>
     </p>
 
-    <hr>
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
