@@ -2,3 +2,33 @@
   text-align: right;
   font-size: 15px;
 }
+
+.nav.user {
+  border-bottom: 2px solid #20B2AA;
+}
+
+.nav.nav-admin {
+  height: 35px;
+  padding: 15px;
+  line-height: 35px;
+  color: #ffffff;
+  background-color: #4293e6;
+  margin-bottom: 40px;
+}
+
+.nav-admin.title {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.nav-admin.user {
+  float: right;
+}
+
+.nav-admin.user-email {
+  text-decoration: underline;
+}
+
+.nav.nav-admin {
+  color: #ffffff
+}
