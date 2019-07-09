@@ -25,6 +25,6 @@ class User < ApplicationRecord
   end
 
   def admin?
-    is_a?(Admin)
+   is_a?(Admin)
   end
 end
