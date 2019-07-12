@@ -4,7 +4,7 @@ ru:
       user:
         first_name: "Имя"
         last_name: "Фамилия"
-        email: "Элетронная почта"
+        email: "Электронная почта"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         remember_me: "Запомнить меня"
