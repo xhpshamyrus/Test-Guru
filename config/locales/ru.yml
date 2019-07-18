@@ -59,6 +59,12 @@ ru:
       delete: "Тест удален!"
     nav:
       logout: "Выйти"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        url: "Ссылка на Gist"
+        user: "Эл.почта пользователя"
 
   test_passages:
     result:
@@ -68,6 +74,11 @@ ru:
       result: "Результат: %{result}%"
     show:
       header: "Прохождение теста: %{title}"
+    update:
+      completed: "Тест завершен!"
+    gist:
+      success: "Вопрос успешно сохранен на Gist %{url}"
+      failure: "Вопрос не сохранен!"
 
   tests_mailer:
     completed_test:
@@ -78,3 +89,11 @@ ru:
      logout: "Выйти"
      registration: "Регистрация"
      login: "Войти"
+
+  shared:
+    nav:
+     logout: "Выход"
+     registration: "Регистрация"
+     login: "Войти"
+     admin: "Панель Администратора"
+     gists_table: "Таблица гистов"
