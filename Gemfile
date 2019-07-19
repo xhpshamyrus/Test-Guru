@@ -35,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.0'
 
+gem 'faraday'
+gem 'octokit', '~> 4.0'
+gem 'dotenv-rails', groups: [:development, :test]
+
 # LOCALIZATION
 
 gem 'rails-i18n', '~> 5.1'

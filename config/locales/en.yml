@@ -57,6 +57,12 @@ en:
       delete: "Delete test!"
     nav:
       logout: "LogOut"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        url: "Gist url"
+        user: "User email"
 
   test_passages:
     result:
@@ -66,6 +72,11 @@ en:
       result: "Result: %{result}%"
     show:
       header: "Passing the %{title} Test"
+    update:
+      completed: "Test has been completed!"
+    gist:
+      success: "Question has been successfuly saved to Gist! url: %{url}"
+      failure: "Question isn't saved!"
 
   tests_mailer:
     completed_test:
@@ -76,3 +87,11 @@ en:
      logout: "LogOut"
      registration: "Registration"
      login: "LogIn"
+  
+  shared:
+    nav:
+     logout: "LogOut"
+     registration: "Registration"
+     login: "LogIn"
+     admin: "AdminPanel"
+     gists_table: "Gists table"
