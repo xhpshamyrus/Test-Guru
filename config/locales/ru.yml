@@ -52,11 +52,15 @@ ru:
         question: "Вопросы"
         actions: "Действия"
         new: "Новый тест"
+      form_inline:
+        submit: ОК
       show:
         new_question: "Новый вопрос"
       create: "Создан новый тест! Автор: %{author_first_name} %{author_last_name}"
       update: "Тест изменен!"
       delete: "Тест удален!"
+    form_inline:
+      submit: OK
     nav:
       logout: "Выйти"
     gists:
@@ -97,3 +101,5 @@ ru:
      login: "Войти"
      admin: "Панель Администратора"
      gists_table: "Таблица гистов"
+    errors:
+      header: "Обнаружены ошибки(%{count})"

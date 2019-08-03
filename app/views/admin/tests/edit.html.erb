@@ -1,4 +1,6 @@
 <h1>Edit <%= @test.title %> test</h1>
 
+<%= render 'shared/errors', resource: @test %>
 <%= render 'form' %>
+
 <%= link_to t('actions.back'), admin_tests_path, class: 'btn btn-outline-primary' %>

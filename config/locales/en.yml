@@ -50,6 +50,8 @@ en:
         question: "Questions"
         action: "Actions"
         new: "New test"
+      form_inline:
+        submit: OK
       show:
         new_question: "New question"
       create: "Add new test! Author: %{author_first_name} %{author_last_name}"
@@ -95,3 +97,5 @@ en:
      login: "LogIn"
      admin: "AdminPanel"
      gists_table: "Gists table"
+    errors:
+      header: "Errors detected(%{count})"
