@@ -18,6 +18,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:title, :message, :user_id)
+    params.require(:feedback).permit(:title, :body, :user_id)
   end
 end

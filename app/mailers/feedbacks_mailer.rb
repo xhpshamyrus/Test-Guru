@@ -2,7 +2,7 @@ class FeedbacksMailer < ApplicationMailer
   def send_feedback(feedback)
     @user = feedback.user
     @title = feedback.title
-    @message = feedback.message
+    @body = feedback.body
 
     @admin = User.find_by(type: 'Admin')
 
