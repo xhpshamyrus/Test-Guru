@@ -26,7 +26,7 @@ class TestPassagesController < ApplicationController
     response = result.call
     url = response.html_url
 
-    flash = if service.success?
+    flash = if result.success?
               current_user.gists.create(question: question, url: url)
               { notice: t('.success', url: url) }
             else
