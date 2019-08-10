@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_064131) do
+ActiveRecord::Schema.define(version: 2019_08_07_110146) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -26,6 +29,15 @@ ActiveRecord::Schema.define(version: 2019_07_14_064131) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "message", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -65,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_07_14_064131) do
     t.datetime "updated_at", null: false
     t.integer "category_id"
     t.integer "author_id"
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
@@ -92,8 +105,10 @@ ActiveRecord::Schema.define(version: 2019_07_14_064131) do
     t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["first_name", "last_name"], name: "index_users_on_first_name_and_last_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "feedbacks", "users"
 end

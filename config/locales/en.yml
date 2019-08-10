@@ -20,6 +20,11 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
+  feedbacks:
+    new:
+      title: "Feedback"
+      send: "Send"
+
   tests:
     index:
       header: "Tests"
@@ -92,6 +97,7 @@ en:
   
   shared:
     nav:
+     feedback: "Feedback"
      logout: "LogOut"
      registration: "Registration"
      login: "LogIn"
