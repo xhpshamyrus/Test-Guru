@@ -111,4 +111,11 @@ ActiveRecord::Schema.define(version: 2019_08_07_110146) do
   end
 
   add_foreign_key "feedbacks", "users"
+  add_foreign_key "questions", "tests"
+  add_foreign_key "answers", "questions"
+  add_foreign_key "gists", "questions"
+  add_foreign_key "gists", "users"
+  add_foreign_key "test_passages", "tests"
+  add_foreign_key "test_passages", "users"
+  add_foreign_key "tests", "categories"
 end
