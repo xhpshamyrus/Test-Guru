@@ -74,6 +74,24 @@ ru:
         question: "Вопрос"
         url: "Ссылка на Gist"
         user: "Эл.почта пользователя"
+    badges:
+      index:
+        admin_header: "Администрирование бейджей"
+        user_badges: "Полученные бейджи"
+        all_badges: "Все бейджи"
+        new_badge: "Новый бейдж"
+        actions: "Действия"
+        image: "Логотип"
+        title: "Навание"
+        rule: "Правило"
+      new:
+        title: "Создание нового бейджа"
+        back: "Назад"
+      edit:
+        title: "Изменение бейджа"
+      form:
+        create_rule: "Создать правило"
+        back: "Назад"
 
   test_passages:
     result:
@@ -107,5 +125,13 @@ ru:
      login: "Войти"
      admin: "Панель Администратора"
      gists_table: "Таблица гистов"
+     badges: "Бейджи"
     errors:
       header: "Обнаружены ошибки(%{count})"
+  badges:
+    index: 
+     header: "Бейджи"
+     user_badges: "Полученные бейджи"
+     all_badges: "Все бейджи"
+     image: "Логотип"
+     title: "Название"
