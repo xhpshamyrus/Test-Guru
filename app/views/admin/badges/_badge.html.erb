@@ -1,0 +1,18 @@
+<tr>
+	<% if badge.image_url.present? %>
+		<td class="align-middle col-md-3"><%= image_tag badge.image_url, size: '70x70' %></td>
+	<% else %>
+		<td class="align-middle col-md-3"><%= image_tag asset_path 'ruby.png' %></td>
+	<% end %>
+
+	<td class="align-middle"><%= badge.title %></td>
+	<td class="align-middle"><%= badge.rule_type %></td>
+	<td class="align-middle"><%= link_to t('.edit'), edit_admin_badge_path(badge) %>
+	</td>
+	<td class="align-middle"><%= link_to t('.delete'),
+																			 admin_badge_path(badge),
+																			 method: :delete,
+																			 data: { confirm: t('.choice') } %></td>
+</tr>
+
+

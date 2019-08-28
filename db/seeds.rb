@@ -8,7 +8,7 @@
 
 users = User.create([ {login: 'Alex', email: 'alex@goole.com'}, {login: 'Tom', email: 'tom@google.com'}, {login: 'Ban', email: 'ban@google.com'} ])
 
-categories = Category.create([{title: 'Математика'}, {title: 'Русский язык'}, {title: 'Геоеграфия'}])
+categories = Category.create([{title: 'Математика'}, {title: 'Русский язык'}, {title: 'География'}])
 
 tests = Test.create([{title: 'Целые числа', category_id: 1, level: 1},
                      {title: 'Правописание', category_id: 2, level: 2},
@@ -29,7 +29,6 @@ answers = Answer.create([
                {body: 'Да', question_id: 1, correct: true},
                {body: 'Нет', question_id: 1},
                {body: 'Вероятно', question_id: 1},
-               {body: 'Скорее всего', question_id: 1},
                {body: 'Да', question_id: 2, correct: true},
                {body: 'Нет', question_id: 2},
                {body: 'Да', question_id: 3, correct: true},
@@ -40,6 +39,10 @@ answers = Answer.create([
                {body: 'Нет', question_id: 5},
                {body: 'Нет', question_id: 6, correct: true},
                {body: 'Да', question_id: 6}])
+
+badges = Badge.create([{ title: 'Вы успешно завершили математический тест', rule_type: 'category_complete' },
+                       { title: 'Вы успешно завершили тест с первой попытки', rule_type: 'first_attempt_complete' },
+                       { title: 'Вы успешно завершили тест второго уровня сложности', rule_type: 'level_complete' }])
 
 #tests_users = TestsUser.create([{user_id: users[0].id, test_id: tests[0].id}, {user_id: users[0].id, test_id: tests[1].id}, {user_id: users[0].id, test_id: tests[2].id}])
 

@@ -19,7 +19,7 @@ before_action :set_test, only: %i[show edit update destroy update_inline]
 
   def destroy
     @test.destroy
-    redirect_to admin_test_path, notice: t('.delete')
+    redirect_to admin_tests_path, notice: t('.delete')
   end
 
   def update
