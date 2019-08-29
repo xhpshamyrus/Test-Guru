@@ -10,7 +10,7 @@ class BadgeService
   end
 
   def call_badge
-    Badge.all.each { |badge| send("#{badge.rule_type}_complete?", badge)}
+    Badge.all.each { |badge| send("#{badge.rule_type}?", badge)}  #_complete?
   end
 
   def category_complete?(badge)
