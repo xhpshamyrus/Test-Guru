@@ -1,8 +1,15 @@
 document.addEventListener('turbolinks:load', function() {
-  var controlTimer = document.getElementById('timer');
+  var controlTimer = document.getElementById('timer')
 
-  if (timer) { startTimer(controlTimer) } 
-});
+  if (controlTimer) { startTimer(controlTimer) } 
+
+  var errors = document.getElementById('.alert')
+
+  if (errors) {
+    alert('asadddeded')
+    document.getElementById('.alert').textContent = "Java";
+    }
+  });
 
 function startTimer(controlTimer) {
   var startTime = controlTimer.dataset.startTime;
