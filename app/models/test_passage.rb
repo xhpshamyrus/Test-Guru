@@ -7,7 +7,6 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
-  before_validation :before_validation_set_timer, on: :create
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
@@ -41,6 +40,10 @@ class TestPassage < ApplicationRecord
     test.questions.size
   end
 
+  def time_out?
+    (Time.now - self.created_at) > test.time_period if test.time_period
+  end
+
   private
 
   def before_validation_set_first_question
@@ -50,11 +53,6 @@ class TestPassage < ApplicationRecord
   def before_validation_set_next_question
     self.current_question = next_question
   end
-
-  def before_validation_set_timer
-    self.timer = test.time_period
-  end
-
 
   def correct_answer?(answer_ids)
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort if answer_ids != nil
@@ -66,6 +64,5 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.nil? ? 0 : current_question.id).first
-    #test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
