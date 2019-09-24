@@ -56,7 +56,7 @@ before_action :set_test, only: %i[show edit update destroy update_inline]
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id, :time_period)
   end
 
   def set_test
