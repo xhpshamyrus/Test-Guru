@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 gem 'faraday'
 gem 'octokit', '~> 4.0'
